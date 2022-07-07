@@ -1,0 +1,15 @@
+name: Shell comand
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    environment: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hellow world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
